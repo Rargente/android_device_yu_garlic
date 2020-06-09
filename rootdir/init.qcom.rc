@@ -591,7 +591,7 @@ service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
 
 service port-bridge /system/bin/port-bridge
     class main
-    user radio system
+    user radio 
     group radio system inet
     oneshot
 
@@ -885,16 +885,6 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
     socket ims_rtpd stream 0660 system radio
     group radio net_raw diag diag inet log
     disabled
-
-service imscmservice /system/bin/imscmservice
-    class main
-    user system
-    group radio net_raw diag diag log
-    disabled
-
-on property:sys.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
-    start imscmservice
 
 service ppd /system/vendor/bin/mm-pp-dpps
     class late_start
