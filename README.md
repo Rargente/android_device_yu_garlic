@@ -1,3 +1,5 @@
+### This branch will only work on devices with a vendor partition created from userdata!
+
 ### Device tree for Wiko Ufeel Prime, YU Yureka Black (YU5040) and the BLU Life One X2 Mini
 
 The 'garlic' flavour of handset were released around the world with various branding, providing a stylish mid-range phone at a reasonable price.
